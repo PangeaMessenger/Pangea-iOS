@@ -13,6 +13,7 @@
 		23B8FA75268F39EC00375FFD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23B8FA74268F39EC00375FFD /* Preview Assets.xcassets */; };
 		23B8FA77268F39EC00375FFD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8FA76268F39EC00375FFD /* Persistence.swift */; };
 		23B8FA7A268F39EC00375FFD /* Pangea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23B8FA78268F39EC00375FFD /* Pangea.xcdatamodeld */; };
+		F44A4C6E2690CBAE0004B6CC /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A4C6D2690CBAE0004B6CC /* MessageListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		23B8FA76268F39EC00375FFD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		23B8FA79268F39EC00375FFD /* Pangea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pangea.xcdatamodel; sourceTree = "<group>"; };
 		23B8FA7B268F39EC00375FFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F44A4C6D2690CBAE0004B6CC /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +58,8 @@
 		23B8FA6C268F39EB00375FFD /* Pangea */ = {
 			isa = PBXGroup;
 			children = (
+				F44A4C6A269090DA0004B6CC /* Views */,
 				23B8FA6D268F39EB00375FFD /* PangeaApp.swift */,
-				23B8FA6F268F39EB00375FFD /* ContentView.swift */,
 				23B8FA71268F39EC00375FFD /* Assets.xcassets */,
 				23B8FA76268F39EC00375FFD /* Persistence.swift */,
 				23B8FA7B268F39EC00375FFD /* Info.plist */,
@@ -73,6 +75,15 @@
 				23B8FA74268F39EC00375FFD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F44A4C6A269090DA0004B6CC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				23B8FA6F268F39EB00375FFD /* ContentView.swift */,
+				F44A4C6D2690CBAE0004B6CC /* MessageListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 				23B8FA77268F39EC00375FFD /* Persistence.swift in Sources */,
 				23B8FA70268F39EB00375FFD /* ContentView.swift in Sources */,
 				23B8FA6E268F39EB00375FFD /* PangeaApp.swift in Sources */,
+				F44A4C6E2690CBAE0004B6CC /* MessageListView.swift in Sources */,
 				23B8FA7A268F39EC00375FFD /* Pangea.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,7 +289,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pangea/Preview Content\"";
-				DEVELOPMENT_TEAM = 3LJ9H6BD56;
+				DEVELOPMENT_TEAM = 2H5YTYL5HZ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pangea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -285,7 +297,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rpwnage.Pangea;
+				PRODUCT_BUNDLE_IDENTIFIER = lol.Mattso.Pangea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -299,7 +311,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pangea/Preview Content\"";
-				DEVELOPMENT_TEAM = 3LJ9H6BD56;
+				DEVELOPMENT_TEAM = 2H5YTYL5HZ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pangea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -307,7 +319,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rpwnage.Pangea;
+				PRODUCT_BUNDLE_IDENTIFIER = lol.Mattso.Pangea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
