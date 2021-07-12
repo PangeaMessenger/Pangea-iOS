@@ -11,6 +11,7 @@ import SwiftUI
 struct MessageListView: View {
     @State private var showingMessageView = false
     @State private var showingSettingsView = false
+    @State private var showingContactsView = false
     var body: some View {
         NavigationView {
             VStack {
@@ -21,12 +22,13 @@ struct MessageListView: View {
                             .resizable()
                             .clipShape(Circle())
                             .frame(width: 75, height: 75)
-                            .padding(10)
+                            .padding(5)
                         VStack(alignment: .leading, spacing: 6) {
                             Text("Jeff")
                                 .bold()
                             Text("My name is Jeff.")
                                 .foregroundColor(Color(.systemGray))
+                            Spacer()
                         }
                         Spacer()
                         VStack(alignment: .trailing, spacing: 6) {
@@ -39,7 +41,7 @@ struct MessageListView: View {
                         }
                     }
                     Divider()
-                }
+                }.frame(height: 80)
                 .onTapGesture {
                     showingMessageView.toggle()
                 }.sheet(isPresented: $showingMessageView) {
@@ -51,13 +53,14 @@ struct MessageListView: View {
                         Image(uiImage: UIImage(named: "pwnage") ?? UIImage())
                             .resizable()
                             .clipShape(Circle())
-                            .frame(width: 75, height: 75)
+                            .frame(width: 65, height: 65)
                             .padding(10)
                         VStack(alignment: .leading, spacing: 6) {
                             Text("Rpwnage")
                                 .bold()
                             Text("Manticore s0n")
                                 .foregroundColor(Color(.systemGray))
+                            Spacer()
                         }
                         Spacer()
                         VStack(alignment: .trailing, spacing: 6) {
@@ -70,7 +73,7 @@ struct MessageListView: View {
                         }
                     }
                     Divider()
-                }
+                }.frame(height: 80)
                 Spacer()
                 
                 ZStack(alignment: .bottomTrailing) {
@@ -88,9 +91,11 @@ struct MessageListView: View {
             .toolbar(content: {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button {
-                        print("contacts list tapped")
+                        showingContactsView.toggle()
                     } label: {
                         Image(systemName: "rectangle.stack.person.crop.fill")
+                    }.sheet(isPresented: $showingContactsView) {
+                        ContactsView(isShowing: $showingContactsView)
                     }
                     
                     Spacer()
