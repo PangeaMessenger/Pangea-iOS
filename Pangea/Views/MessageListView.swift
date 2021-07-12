@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct MessageListView: View {
+    @State private var showingMessageView = false
     var body: some View {
         NavigationView {
             VStack {
@@ -37,6 +38,11 @@ struct MessageListView: View {
                         }
                     }
                     Divider()
+                }
+                .onTapGesture {
+                    showingMessageView.toggle()
+                }.sheet(isPresented: $showingMessageView) {
+                    MessageView(isShowing: $showingMessageView)
                 }
                 
                 VStack {
@@ -78,6 +84,23 @@ struct MessageListView: View {
             }
 
             .navigationBarTitle(Text("Messages"))
+            .toolbar(content: {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button {
+                        print("contacts list tapped")
+                    } label: {
+                        Image(systemName: "rectangle.stack.person.crop.fill")
+                    }
+                    
+                    Spacer()
+                
+                    Button {
+                        print("settings")
+                    } label: {
+                        Image(systemName: "gearshape.fill")
+                    }
+                }
+            })
         }
     }
 }
