@@ -10,6 +10,7 @@ import SwiftUI
 
 struct MessageListView: View {
     @State private var showingMessageView = false
+    @State private var showingSettingsView = false
     var body: some View {
         NavigationView {
             VStack {
@@ -95,9 +96,11 @@ struct MessageListView: View {
                     Spacer()
                 
                     Button {
-                        print("settings")
+                        showingSettingsView.toggle()
                     } label: {
                         Image(systemName: "gearshape.fill")
+                    }.sheet(isPresented: $showingSettingsView) {
+                        SettingsView(isShowing: $showingSettingsView)
                     }
                 }
             })

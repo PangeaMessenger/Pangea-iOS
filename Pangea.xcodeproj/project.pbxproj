@@ -13,6 +13,7 @@
 		23B8FA75268F39EC00375FFD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23B8FA74268F39EC00375FFD /* Preview Assets.xcassets */; };
 		23B8FA77268F39EC00375FFD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8FA76268F39EC00375FFD /* Persistence.swift */; };
 		23B8FA7A268F39EC00375FFD /* Pangea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23B8FA78268F39EC00375FFD /* Pangea.xcdatamodeld */; };
+		23D96BB4269CE24A00C4AD3F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D96BB3269CE24A00C4AD3F /* SettingsView.swift */; };
 		F44A4C6E2690CBAE0004B6CC /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A4C6D2690CBAE0004B6CC /* MessageListView.swift */; };
 		F4B927DD269C21CB00795824 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B927DC269C21CB00795824 /* MessageView.swift */; };
 		F4B927E0269C22CE00795824 /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B927DF269C22CE00795824 /* MessageManager.swift */; };
@@ -28,6 +29,7 @@
 		23B8FA76268F39EC00375FFD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		23B8FA79268F39EC00375FFD /* Pangea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pangea.xcdatamodel; sourceTree = "<group>"; };
 		23B8FA7B268F39EC00375FFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23D96BB3269CE24A00C4AD3F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		F44A4C6D2690CBAE0004B6CC /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 		F4B927DC269C21CB00795824 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		F4B927DF269C22CE00795824 /* MessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				F44A4C6D2690CBAE0004B6CC /* MessageListView.swift */,
 				F4B927DC269C21CB00795824 /* MessageView.swift */,
 				F4B927E1269C293500795824 /* ScrollView.swift */,
+				23D96BB3269CE24A00C4AD3F /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				F4B927DD269C21CB00795824 /* MessageView.swift in Sources */,
 				23B8FA77268F39EC00375FFD /* Persistence.swift in Sources */,
 				23B8FA70268F39EB00375FFD /* ContentView.swift in Sources */,
+				23D96BB4269CE24A00C4AD3F /* SettingsView.swift in Sources */,
 				23B8FA6E268F39EB00375FFD /* PangeaApp.swift in Sources */,
 				F4B927E0269C22CE00795824 /* MessageManager.swift in Sources */,
 				F4B927E2269C293500795824 /* ScrollView.swift in Sources */,
