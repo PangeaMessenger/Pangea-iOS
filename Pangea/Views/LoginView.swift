@@ -25,7 +25,7 @@ struct LoginView: View {
                     TextField("Username", text: $username)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 300)
-                    TextField("Password", text: $password)
+                    SecureField("Password", text: $password)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 300)
                 }
