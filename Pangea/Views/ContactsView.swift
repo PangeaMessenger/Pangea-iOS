@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContactsView: View {
     @Binding var isShowing: Bool
+    @State var showingContactUserView = false
     var body: some View {
         NavigationView {
             Form {
@@ -17,7 +18,11 @@ struct ContactsView: View {
                 }
                 
                 Section(header: Text("J")) {
-                    Text("Jeff")
+                    Button("Jeff") {
+                        showingContactUserView.toggle()
+                    }.sheet(isPresented: $showingContactUserView) {
+                        ContactUserView(isShowing: $showingContactUserView)
+                    }
                     Text("James")
                 }
             }
