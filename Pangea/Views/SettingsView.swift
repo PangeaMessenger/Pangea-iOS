@@ -10,35 +10,57 @@ import SwiftUI
 
 struct SettingsView: View {
     @Binding var isShowing: Bool
+    @State var showingLoginView = false
     var body: some View {
         NavigationView {
             VStack {
                 VStack(alignment: .center, spacing: 2) {
-                    Image(uiImage: UIImage(named: "pwnage") ?? UIImage())
+                    Image(uiImage: UIImage(named: "notlogged") ?? UIImage())
                         .resizable()
                         .clipShape(Circle())
                         .frame(width: 100, height: 100, alignment: .center)
                         .padding(8)
             
-                    Text("RPwnage")
+                    Text("Not Logged In")
                         .font(.system(size: 30))
                         .bold()
                     }
             
                 VStack(spacing: 2) {
-                    Button {
-                        print("edit info")
-                    } label: {
-                        HStack {
-                            Image(systemName: "pencil")
-                                .foregroundColor(.white)
-                            Text("Edit my Information")
-                                .foregroundColor(.white)
+                    
+                    if user.isLoggedIn == false {
+                        Button {
+                            showingLoginView.toggle()
+                        } label: {
+                                HStack {
+                                    Image(systemName: "person.crop.circle.fill.badge.plus")
+                                    .foregroundColor(.white)
+                                    Text("Login")
+                                        .foregroundColor(.white)
+                                }
+                                .frame(minWidth: 0, maxWidth: .infinity)
+                                .font(.system(size: 18))
+                                .padding()
+                                .background(Color(.systemGray5))
+                        }.sheet(isPresented: $showingLoginView) {
+                            LoginView(isShowing: $showingLoginView)
                         }
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .font(.system(size: 18))
-                        .padding()
-                        .background(Color(.systemGray5))
+                    } else {
+                    
+                        Button {
+                            print("edit info")
+                        } label: {
+                            HStack {
+                                Image(systemName: "pencil")
+                                    .foregroundColor(.white)
+                                Text("Edit my Information")
+                                    .foregroundColor(.white)
+                            }
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .font(.system(size: 18))
+                            .padding()
+                            .background(Color(.systemGray5))
+                        }
                     }
                     
                     Button {
