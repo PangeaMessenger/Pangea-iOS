@@ -18,21 +18,25 @@ struct MessageListView: View {
                 VStack {
                     Divider()
                     HStack {
-                        Image(uiImage: UIImage(named: "jeff") ?? UIImage())
+                        Circle()
+                            .fill(Color.blue)
+                            .frame(width: 5, height: 5)
+                            .padding(10)
+                        Image(uiImage: UIImage(named: "notlogged") ?? UIImage())
                             .resizable()
                             .clipShape(Circle())
                             .frame(width: 75, height: 75)
                             .padding(5)
                         VStack(alignment: .leading, spacing: 6) {
-                            Text("Jeff")
+                            Text("John Smith")
                                 .bold()
-                            Text("My name is Jeff.")
+                            Text("This is a sample message.")
                                 .foregroundColor(Color(.systemGray))
                             Spacer()
                         }
                         Spacer()
                         VStack(alignment: .trailing, spacing: 6) {
-                            Text("4:20am")
+                            Text("8.30am")
                                 .foregroundColor(Color(.systemGray3))
                                 .padding(5)
                             Text(">")
@@ -48,32 +52,6 @@ struct MessageListView: View {
                     MessageView(isShowing: $showingMessageView)
                 }
                 
-                VStack {
-                    HStack {
-                        Image(uiImage: UIImage(named: "pwnage") ?? UIImage())
-                            .resizable()
-                            .clipShape(Circle())
-                            .frame(width: 65, height: 65)
-                            .padding(10)
-                        VStack(alignment: .leading, spacing: 6) {
-                            Text("Rpwnage")
-                                .bold()
-                            Text("Manticore s0n")
-                                .foregroundColor(Color(.systemGray))
-                            Spacer()
-                        }
-                        Spacer()
-                        VStack(alignment: .trailing, spacing: 6) {
-                            Text("1:37pm")
-                                .foregroundColor(Color(.systemGray3))
-                                .padding(5)
-                            Text(">")
-                                .foregroundColor(Color(.systemGray3))
-                                .padding(10)
-                        }
-                    }
-                    Divider()
-                }.frame(height: 80)
                 Spacer()
                 
                 ZStack(alignment: .bottomTrailing) {

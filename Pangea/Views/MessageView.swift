@@ -59,7 +59,7 @@ struct MessageView: View {
                 }
                 .padding()
             }
-            .navigationTitle("Jeff")
+            .navigationTitle("John Smith")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(content: {
                 Button {

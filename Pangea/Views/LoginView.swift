@@ -30,7 +30,6 @@ struct LoginView: View {
                         .frame(width: 300)
                 }
                 Spacer()
-                
                 Button {
                     print("create account")
                 } label: {
@@ -51,4 +50,5 @@ struct LoginView: View {
 
 struct user {
     static var isLoggedIn: Bool = false
+    static var hasMessages: Bool = false
 }
