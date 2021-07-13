@@ -26,22 +26,40 @@ struct SettingsView: View {
                         .bold()
                     }
             
-                VStack(spacing: 2) {
-                    
+                HStack(spacing: 10) {
+                    Spacer()
+                    VStack(spacing: 2) {
                     if user.isLoggedIn == false {
                         Button {
                             showingLoginView.toggle()
                         } label: {
-                                HStack {
-                                    Image(systemName: "person.crop.circle.fill.badge.plus")
+                            HStack {
+                                Image(systemName: "person.crop.circle.fill.badge.plus")
                                     .foregroundColor(.white)
-                                    Text("Login")
-                                        .foregroundColor(.white)
-                                }
-                                .frame(minWidth: 0, maxWidth: .infinity)
-                                .font(.system(size: 18))
-                                .padding()
-                                .background(Color(.systemGray5))
+                                Text("Login")
+                                    .foregroundColor(.white)
+                            }
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .font(.system(size: 18))
+                            .padding()
+                            .background(Color(.systemGray5))
+                        }.sheet(isPresented: $showingLoginView) {
+                            LoginView(isShowing: $showingLoginView)
+                        }
+                        
+                        Button {
+                            showingLoginView.toggle()
+                        } label: {
+                            HStack {
+                                Image(systemName: "person.crop.circle.fill.badge.checkmark")
+                                    .foregroundColor(.white)
+                                Text("Sign up")
+                                    .foregroundColor(.white)
+                            }
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .font(.system(size: 18))
+                            .padding()
+                            .background(Color(.systemGray5))
                         }.sheet(isPresented: $showingLoginView) {
                             LoginView(isShowing: $showingLoginView)
                         }
@@ -63,6 +81,7 @@ struct SettingsView: View {
                         }
                     }
                     
+                    if user.isLoggedIn == true {
                     Button {
                         print("notifiction settings")
                     } label: {
@@ -92,7 +111,7 @@ struct SettingsView: View {
                         .padding()
                         .background(Color(.systemGray5))
                     }
-                    
+                    }
                     Button {
                         print("reset app")
                     } label: {
@@ -107,6 +126,8 @@ struct SettingsView: View {
                         .padding()
                         .background(Color.red)
                     }
+                }
+                    Spacer()
                 }
                 Spacer()
             }
