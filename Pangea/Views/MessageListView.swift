@@ -39,9 +39,7 @@ struct MessageListView: View {
                             Text("8.30am")
                                 .foregroundColor(Color(.systemGray3))
                                 .padding(5)
-                            Text(">")
-                                .foregroundColor(Color(.systemGray3))
-                                .padding(10)
+                            Spacer()
                         }
                     }
                     Divider()
