@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23A40CAB26A2CAFA00F291F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23A40CAA26A2CAFA00F291F2 /* GoogleService-Info.plist */; };
+		23A40CAE26A2CB2B00F291F2 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A40CAD26A2CB2B00F291F2 /* HomeModel.swift */; };
+		23A40CB026A2CB5100F291F2 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A40CAF26A2CB5100F291F2 /* MessageModel.swift */; };
 		23B8FA6E268F39EB00375FFD /* PangeaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8FA6D268F39EB00375FFD /* PangeaApp.swift */; };
 		23B8FA70268F39EB00375FFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8FA6F268F39EB00375FFD /* ContentView.swift */; };
 		23B8FA72268F39EC00375FFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23B8FA71268F39EC00375FFD /* Assets.xcassets */; };
@@ -15,6 +18,7 @@
 		23B8FA7A268F39EC00375FFD /* Pangea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23B8FA78268F39EC00375FFD /* Pangea.xcdatamodeld */; };
 		23D96BB4269CE24A00C4AD3F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D96BB3269CE24A00C4AD3F /* SettingsView.swift */; };
 		23D96BB6269CE64800C4AD3F /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D96BB5269CE64800C4AD3F /* ContactsView.swift */; };
+		BDB4C1D0A0D1EF7EE3819E26 /* Pods_Pangea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33BE961ABBBA8A9E9FE3C7ED /* Pods_Pangea.framework */; };
 		F40FC339269D6E8700F91D0E /* ContactUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40FC338269D6E8700F91D0E /* ContactUserView.swift */; };
 		F40FC33B269DA8AF00F91D0E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40FC33A269DA8AF00F91D0E /* LoginView.swift */; };
 		F44A4C6E2690CBAE0004B6CC /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A4C6D2690CBAE0004B6CC /* MessageListView.swift */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		072D803096B6BE0ABC0A0AF4 /* Pods-Pangea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pangea.release.xcconfig"; path = "Target Support Files/Pods-Pangea/Pods-Pangea.release.xcconfig"; sourceTree = "<group>"; };
+		23A40CAA26A2CAFA00F291F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		23A40CAD26A2CB2B00F291F2 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		23A40CAF26A2CB5100F291F2 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		23B8FA6A268F39EB00375FFD /* Pangea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pangea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B8FA6D268F39EB00375FFD /* PangeaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangeaApp.swift; sourceTree = "<group>"; };
 		23B8FA6F268F39EB00375FFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +42,8 @@
 		23B8FA7B268F39EC00375FFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23D96BB3269CE24A00C4AD3F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		23D96BB5269CE64800C4AD3F /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		33BE961ABBBA8A9E9FE3C7ED /* Pods_Pangea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pangea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BE19F767676FF331EEAD1F0 /* Pods-Pangea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pangea.debug.xcconfig"; path = "Target Support Files/Pods-Pangea/Pods-Pangea.debug.xcconfig"; sourceTree = "<group>"; };
 		F40FC338269D6E8700F91D0E /* ContactUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUserView.swift; sourceTree = "<group>"; };
 		F40FC33A269DA8AF00F91D0E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F44A4C6D2690CBAE0004B6CC /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
@@ -47,17 +57,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDB4C1D0A0D1EF7EE3819E26 /* Pods_Pangea.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23A40CAC26A2CB1A00F291F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23A40CAD26A2CB2B00F291F2 /* HomeModel.swift */,
+				23A40CAF26A2CB5100F291F2 /* MessageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		23B8FA61268F39EB00375FFD = {
 			isa = PBXGroup;
 			children = (
 				23B8FA6C268F39EB00375FFD /* Pangea */,
 				23B8FA6B268F39EB00375FFD /* Products */,
+				36E6A7DB25D0E75316FE7B6D /* Pods */,
+				54270D4E906FF27C58921C38 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,9 +94,11 @@
 		23B8FA6C268F39EB00375FFD /* Pangea */ = {
 			isa = PBXGroup;
 			children = (
+				23A40CAC26A2CB1A00F291F2 /* Model */,
 				F4B927DE269C22C100795824 /* Managers */,
 				F44A4C6A269090DA0004B6CC /* Views */,
 				23B8FA6D268F39EB00375FFD /* PangeaApp.swift */,
+				23A40CAA26A2CAFA00F291F2 /* GoogleService-Info.plist */,
 				23B8FA71268F39EC00375FFD /* Assets.xcassets */,
 				23B8FA76268F39EC00375FFD /* Persistence.swift */,
 				23B8FA7B268F39EC00375FFD /* Info.plist */,
@@ -90,6 +114,23 @@
 				23B8FA74268F39EC00375FFD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		36E6A7DB25D0E75316FE7B6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4BE19F767676FF331EEAD1F0 /* Pods-Pangea.debug.xcconfig */,
+				072D803096B6BE0ABC0A0AF4 /* Pods-Pangea.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		54270D4E906FF27C58921C38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33BE961ABBBA8A9E9FE3C7ED /* Pods_Pangea.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F44A4C6A269090DA0004B6CC /* Views */ = {
@@ -122,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23B8FA7E268F39EC00375FFD /* Build configuration list for PBXNativeTarget "Pangea" */;
 			buildPhases = (
+				F9ED02D7B8576C3210F35F64 /* [CP] Check Pods Manifest.lock */,
 				23B8FA66268F39EB00375FFD /* Sources */,
 				23B8FA67268F39EB00375FFD /* Frameworks */,
 				23B8FA68268F39EB00375FFD /* Resources */,
+				B6BD24E9BCE909448542471F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,10 +217,53 @@
 			files = (
 				23B8FA75268F39EC00375FFD /* Preview Assets.xcassets in Resources */,
 				23B8FA72268F39EC00375FFD /* Assets.xcassets in Resources */,
+				23A40CAB26A2CAFA00F291F2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B6BD24E9BCE909448542471F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pangea/Pods-Pangea-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pangea/Pods-Pangea-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pangea/Pods-Pangea-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9ED02D7B8576C3210F35F64 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pangea-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		23B8FA66268F39EB00375FFD /* Sources */ = {
@@ -193,6 +279,8 @@
 				F40FC33B269DA8AF00F91D0E /* LoginView.swift in Sources */,
 				F40FC339269D6E8700F91D0E /* ContactUserView.swift in Sources */,
 				F4B927E0269C22CE00795824 /* MessageManager.swift in Sources */,
+				23A40CB026A2CB5100F291F2 /* MessageModel.swift in Sources */,
+				23A40CAE26A2CB2B00F291F2 /* HomeModel.swift in Sources */,
 				F4B927E2269C293500795824 /* ScrollView.swift in Sources */,
 				F44A4C6E2690CBAE0004B6CC /* MessageListView.swift in Sources */,
 				23B8FA7A268F39EC00375FFD /* Pangea.xcdatamodeld in Sources */,
@@ -320,6 +408,7 @@
 		};
 		23B8FA7F268F39EC00375FFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BE19F767676FF331EEAD1F0 /* Pods-Pangea.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -342,6 +431,7 @@
 		};
 		23B8FA80268F39EC00375FFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 072D803096B6BE0ABC0A0AF4 /* Pods-Pangea.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
