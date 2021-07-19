@@ -12,11 +12,49 @@ struct MessageListView: View {
     @State private var showingMessageView = false
     @State private var showingSettingsView = false
     @State private var showingContactsView = false
+    @StateObject var homeData = HomeModel()
+    @AppStorage("current_user") var user = ""
     var body: some View {
         NavigationView {
+            // Chat rows
             VStack {
                 VStack {
+                    HStack {
+                        Circle()
+                            .fill(Color.blue)
+                            .frame(width: 5, height: 5)
+                            .padding(10)
+                        Image(uiImage: UIImage(named: "notlogged") ?? UIImage())
+                            .resizable()
+                            .clipShape(Circle())
+                            .frame(width: 75, height: 75)
+                            .padding(5)
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text("John Smith")
+                                .bold()
+                            Text("This is a sample message.")
+                                .foregroundColor(Color(.systemGray))
+                            Spacer()
+                        }
+                        Spacer()
+                        VStack(alignment: .trailing, spacing: 6) {
+                            Text("8.30am")
+                                .foregroundColor(Color(.systemGray3))
+                                .padding(5)
+                            Spacer()
+                        }
+                    }
                     Divider()
+                }.frame(height: 80)
+                .onTapGesture {
+                    showingMessageView.toggle()
+                }.sheet(isPresented: $showingMessageView) {
+                    MessageView(isShowing: $showingMessageView)
+                }
+                
+                Spacer()
+                
+                VStack {
                     HStack {
                         Circle()
                             .fill(Color.blue)
@@ -86,6 +124,9 @@ struct MessageListView: View {
                 }
             })
         }
+        .onAppear(perform: {
+            homeData.onAppear()
+        })
     }
 }
 

@@ -10,6 +10,7 @@
 		23A40CAB26A2CAFA00F291F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23A40CAA26A2CAFA00F291F2 /* GoogleService-Info.plist */; };
 		23A40CAE26A2CB2B00F291F2 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A40CAD26A2CB2B00F291F2 /* HomeModel.swift */; };
 		23A40CB026A2CB5100F291F2 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A40CAF26A2CB5100F291F2 /* MessageModel.swift */; };
+		23A85C7926A5E42B00BB140C /* ChatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A85C7826A5E42B00BB140C /* ChatRow.swift */; };
 		23B8FA6E268F39EB00375FFD /* PangeaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8FA6D268F39EB00375FFD /* PangeaApp.swift */; };
 		23B8FA70268F39EB00375FFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8FA6F268F39EB00375FFD /* ContentView.swift */; };
 		23B8FA72268F39EC00375FFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23B8FA71268F39EC00375FFD /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		23A40CAA26A2CAFA00F291F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		23A40CAD26A2CB2B00F291F2 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		23A40CAF26A2CB5100F291F2 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		23A85C7826A5E42B00BB140C /* ChatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRow.swift; sourceTree = "<group>"; };
 		23B8FA6A268F39EB00375FFD /* Pangea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pangea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B8FA6D268F39EB00375FFD /* PangeaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangeaApp.swift; sourceTree = "<group>"; };
 		23B8FA6F268F39EB00375FFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 				23A40CAF26A2CB5100F291F2 /* MessageModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		23A85C7726A5E41300BB140C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				23A85C7826A5E42B00BB140C /* ChatRow.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		23B8FA61268F39EB00375FFD = {
@@ -136,6 +146,7 @@
 		F44A4C6A269090DA0004B6CC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				23A85C7726A5E41300BB140C /* Components */,
 				23B8FA6F268F39EB00375FFD /* ContentView.swift */,
 				F44A4C6D2690CBAE0004B6CC /* MessageListView.swift */,
 				F4B927DC269C21CB00795824 /* MessageView.swift */,
@@ -283,6 +294,7 @@
 				23A40CAE26A2CB2B00F291F2 /* HomeModel.swift in Sources */,
 				F4B927E2269C293500795824 /* ScrollView.swift in Sources */,
 				F44A4C6E2690CBAE0004B6CC /* MessageListView.swift in Sources */,
+				23A85C7926A5E42B00BB140C /* ChatRow.swift in Sources */,
 				23B8FA7A268F39EC00375FFD /* Pangea.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,7 +426,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pangea/Preview Content\"";
-				DEVELOPMENT_TEAM = 2H5YTYL5HZ;
+				DEVELOPMENT_TEAM = 3LJ9H6BD56;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pangea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -422,7 +434,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lol.Mattso.Pangea;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Pangea.PangeaMessenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -437,7 +449,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pangea/Preview Content\"";
-				DEVELOPMENT_TEAM = 2H5YTYL5HZ;
+				DEVELOPMENT_TEAM = 3LJ9H6BD56;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pangea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -445,7 +457,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lol.Mattso.Pangea;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Pangea.PangeaMessenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
