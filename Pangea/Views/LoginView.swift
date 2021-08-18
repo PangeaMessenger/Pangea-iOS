@@ -10,9 +10,12 @@ import SwiftUI
 
 struct LoginView: View {
     @Binding var isShowing: Bool
+    @State private var showingSignupView = false
     
-    @State var username: String = ""
+    @State var email: String = ""
     @State var password: String = ""
+    
+    @State var authenticationFailed: Bool = false
     
     var body: some View {
         NavigationView {
@@ -22,19 +25,26 @@ struct LoginView: View {
                     .font(.system(size: 60))
                     .padding(10)
                 VStack(alignment: .center) {
-                    TextField("Username", text: $username)
+                    TextField("Email", text: $email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 300)
                     SecureField("Password", text: $password)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 300)
+                    
+                    if authenticationFailed {
+                        Text("An error occured. Please check that the information is entered correctly!")
+                    }
                 }
                 Spacer()
                 Button {
                     print("create account")
+                    showingSignupView.toggle()
                 } label: {
                     Text("I don't have an account")
-                }
+                }.sheet(isPresented: $showingSignupView, content: {
+                    SignUpView(isShowing: $showingSignupView)
+                })
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar (content: {

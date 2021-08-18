@@ -37,10 +37,8 @@ struct MessageView: View {
                     
                     HStack {
                         ZStack {
-                            TextEditor(text: $manager.text)
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke()
-                                .foregroundColor(Color(.systemGray3))
+                            TextEditor(text: $manager.text)
                         }
                         .frame(height: 40)
                         

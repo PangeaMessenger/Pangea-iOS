@@ -12,6 +12,9 @@ struct MessageListView: View {
     @State private var showingMessageView = false
     @State private var showingSettingsView = false
     @State private var showingContactsView = false
+    
+    @EnvironmentObject var session: SessionStore
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -51,7 +54,7 @@ struct MessageListView: View {
                 }
                 
                 Spacer()
-                
+                    
                 ZStack(alignment: .bottomTrailing) {
                     Rectangle()
                         .foregroundColor(.clear)
@@ -60,7 +63,6 @@ struct MessageListView: View {
                         .padding()
                 }
 
-                
             }
 
             .navigationBarTitle(Text("Messages"))
