@@ -16,8 +16,9 @@
 		23D96BB4269CE24A00C4AD3F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D96BB3269CE24A00C4AD3F /* SettingsView.swift */; };
 		23D96BB6269CE64800C4AD3F /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D96BB5269CE64800C4AD3F /* ContactsView.swift */; };
 		F40FC339269D6E8700F91D0E /* ContactUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40FC338269D6E8700F91D0E /* ContactUserView.swift */; };
-		F40FC33B269DA8AF00F91D0E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40FC33A269DA8AF00F91D0E /* LoginView.swift */; };
 		F44A4C6E2690CBAE0004B6CC /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A4C6D2690CBAE0004B6CC /* MessageListView.swift */; };
+		F4AD653D26CDAB3C00CABBD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4AD653C26CDAB3C00CABBD5 /* GoogleService-Info.plist */; };
+		F4AD653F26CDC88C00CABBD5 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AD653E26CDC88C00CABBD5 /* WelcomeView.swift */; };
 		F4B927DD269C21CB00795824 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B927DC269C21CB00795824 /* MessageView.swift */; };
 		F4B927E0269C22CE00795824 /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B927DF269C22CE00795824 /* MessageManager.swift */; };
 		F4B927E2269C293500795824 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B927E1269C293500795824 /* ScrollView.swift */; };
@@ -33,8 +34,6 @@
 		F4DB5DF326CD6984003C4309 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F4DB5DF226CD6984003C4309 /* FirebaseFirestore */; };
 		F4DB5DF526CD6984003C4309 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = F4DB5DF426CD6984003C4309 /* FirebaseDatabase */; };
 		F4DB5DF726CD6984003C4309 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = F4DB5DF626CD6984003C4309 /* FirebaseCrashlytics */; };
-		F4DB5DF926CD699C003C4309 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4DB5DF826CD699C003C4309 /* GoogleService-Info.plist */; };
-		F4DB5DFB26CD6BE1003C4309 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB5DFA26CD6BE1003C4309 /* SignUpView.swift */; };
 		F4DB5DFD26CD71A6003C4309 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB5DFC26CD71A6003C4309 /* SessionStore.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,13 +49,12 @@
 		23D96BB3269CE24A00C4AD3F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		23D96BB5269CE64800C4AD3F /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		F40FC338269D6E8700F91D0E /* ContactUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUserView.swift; sourceTree = "<group>"; };
-		F40FC33A269DA8AF00F91D0E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F44A4C6D2690CBAE0004B6CC /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
+		F4AD653C26CDAB3C00CABBD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F4AD653E26CDC88C00CABBD5 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		F4B927DC269C21CB00795824 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		F4B927DF269C22CE00795824 /* MessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
 		F4B927E1269C293500795824 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
-		F4DB5DF826CD699C003C4309 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		F4DB5DFA26CD6BE1003C4309 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		F4DB5DFC26CD71A6003C4309 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +106,7 @@
 				23B8FA71268F39EC00375FFD /* Assets.xcassets */,
 				23B8FA76268F39EC00375FFD /* Persistence.swift */,
 				23B8FA7B268F39EC00375FFD /* Info.plist */,
-				F4DB5DF826CD699C003C4309 /* GoogleService-Info.plist */,
+				F4AD653C26CDAB3C00CABBD5 /* GoogleService-Info.plist */,
 				23B8FA78268F39EC00375FFD /* Pangea.xcdatamodeld */,
 				23B8FA73268F39EC00375FFD /* Preview Content */,
 			);
@@ -133,8 +131,7 @@
 				23D96BB5269CE64800C4AD3F /* ContactsView.swift */,
 				23D96BB3269CE24A00C4AD3F /* SettingsView.swift */,
 				F40FC338269D6E8700F91D0E /* ContactUserView.swift */,
-				F40FC33A269DA8AF00F91D0E /* LoginView.swift */,
-				F4DB5DFA26CD6BE1003C4309 /* SignUpView.swift */,
+				F4AD653E26CDC88C00CABBD5 /* WelcomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,7 +221,7 @@
 			files = (
 				23B8FA75268F39EC00375FFD /* Preview Assets.xcassets in Resources */,
 				23B8FA72268F39EC00375FFD /* Assets.xcassets in Resources */,
-				F4DB5DF926CD699C003C4309 /* GoogleService-Info.plist in Resources */,
+				F4AD653D26CDAB3C00CABBD5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,10 +238,9 @@
 				23D96BB6269CE64800C4AD3F /* ContactsView.swift in Sources */,
 				23D96BB4269CE24A00C4AD3F /* SettingsView.swift in Sources */,
 				23B8FA6E268F39EB00375FFD /* PangeaApp.swift in Sources */,
-				F40FC33B269DA8AF00F91D0E /* LoginView.swift in Sources */,
 				F40FC339269D6E8700F91D0E /* ContactUserView.swift in Sources */,
 				F4DB5DFD26CD71A6003C4309 /* SessionStore.swift in Sources */,
-				F4DB5DFB26CD6BE1003C4309 /* SignUpView.swift in Sources */,
+				F4AD653F26CDC88C00CABBD5 /* WelcomeView.swift in Sources */,
 				F4B927E0269C22CE00795824 /* MessageManager.swift in Sources */,
 				F4B927E2269C293500795824 /* ScrollView.swift in Sources */,
 				F44A4C6E2690CBAE0004B6CC /* MessageListView.swift in Sources */,

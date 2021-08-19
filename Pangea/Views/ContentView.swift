@@ -9,15 +9,17 @@ import SwiftUI
 import Firebase
 
 struct ContentView: View {
-    var body: some View {
-        MessageListView()
-    }
+    @State var isLoggedIn: Bool
     
-    class AppDelegate: NSObject, UIApplicationDelegate {
-      func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        FirebaseApp.configure()
-        return true
-      }
+    init() {
+        if Auth.auth().currentUser != nil {
+            isLoggedIn = true
+        } else {
+            isLoggedIn = false
+        }
+    }
+    var body: some View {
+        WelcomeView(isShowing: $isLoggedIn)
     }
 }
 

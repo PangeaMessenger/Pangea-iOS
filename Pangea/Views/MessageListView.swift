@@ -5,16 +5,14 @@
 //  Created by Mattso on 03/07/2021.
 //
 
-import Foundation
 import SwiftUI
+import Firebase
 
 struct MessageListView: View {
     @State private var showingMessageView = false
     @State private var showingSettingsView = false
     @State private var showingContactsView = false
-    
-    @EnvironmentObject var session: SessionStore
-    
+
     var body: some View {
         NavigationView {
             VStack {
