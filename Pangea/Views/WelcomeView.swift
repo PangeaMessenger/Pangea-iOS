@@ -20,6 +20,7 @@ struct WelcomeView: View {
     
     @State private var authSuccess: Bool = false
     @State var buttonPushed: Bool = false
+    @State var passwordsNoMatch: Bool = true
     @State var int: Int = 0
     
     var body: some View {
@@ -87,6 +88,10 @@ struct WelcomeView: View {
                         } else {
                             Text("Creating account...")
                         }
+                        
+                        if passwordsNoMatch == true {
+                            Text("Your passwords do not match. Please try again.")
+                        }
                     } else {
                         
                     }
@@ -103,7 +108,15 @@ struct WelcomeView: View {
                     }
                     .frame(height: 100)
                     .onTapGesture {
-                        buttonPushed = true
+                        if password == passwordConfirm {
+                            signUp()
+                            buttonPushed = true
+                            passwordsNoMatch = false
+                        } else {
+                            buttonPushed = true
+                            authSuccess = false
+                            passwordsNoMatch = true
+                        }
                     }
                 }
             } else if int == 2 {
@@ -163,6 +176,18 @@ struct WelcomeView: View {
             } else {
                 authSuccess = true
                 print("Logged in successfully!")
+            }
+        }
+    }
+    
+    func signUp() {
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            if error != nil {
+                authSuccess = false
+                print("Uh oh! \(error?.localizedDescription)")
+            } else {
+                authSuccess = true
+                print("Sign up success!")
             }
         }
     }

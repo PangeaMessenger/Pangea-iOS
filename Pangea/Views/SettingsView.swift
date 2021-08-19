@@ -45,42 +45,6 @@ struct SettingsView: View {
                 HStack(spacing: 10) {
                     Spacer()
                     VStack(spacing: 2) {
-                        if Auth.auth().currentUser == nil {
-                        Button {
-                            showingLoginView.toggle()
-                        } label: {
-                            HStack {
-                                Image(systemName: "person.crop.circle.fill.badge.plus")
-                                    .foregroundColor(.white)
-                                Text("Login")
-                                    .foregroundColor(.white)
-                            }
-                            .frame(minWidth: 0, maxWidth: .infinity)
-                            .font(.system(size: 18))
-                            .padding()
-                            .background(Color(.systemGray5))
-                        }.sheet(isPresented: $showingLoginView) {
-                            LoginView(isShowing: $showingLoginView)
-                        }
-                        
-                        Button {
-                            showingLoginView.toggle()
-                        } label: {
-                            HStack {
-                                Image(systemName: "person.crop.circle.fill.badge.checkmark")
-                                    .foregroundColor(.white)
-                                Text("Sign up")
-                                    .foregroundColor(.white)
-                            }
-                            .frame(minWidth: 0, maxWidth: .infinity)
-                            .font(.system(size: 18))
-                            .padding()
-                            .background(Color(.systemGray5))
-                        }.sheet(isPresented: $showingLoginView) {
-                            LoginView(isShowing: $showingLoginView)
-                        }
-                    } else {
-                    
                         Button {
                             print("edit info")
                         } label: {
@@ -109,9 +73,7 @@ struct SettingsView: View {
                             .padding()
                             .background(Color(.systemRed))
                         }
-                    }
                     
-                    if Auth.auth().currentUser != nil {
                     Button {
                         print("notifiction settings")
                     } label: {
@@ -140,7 +102,6 @@ struct SettingsView: View {
                         .font(.system(size: 18))
                         .padding()
                         .background(Color(.systemGray5))
-                    }
                     }
                 }
                     Spacer()
