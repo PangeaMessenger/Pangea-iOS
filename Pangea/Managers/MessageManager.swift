@@ -5,7 +5,7 @@
 //  Created by Mattso on 12/07/2021.
 //
 
-import Foundation
+import Firebase
 
 class MessageManager: ObservableObject {
     var text = ""

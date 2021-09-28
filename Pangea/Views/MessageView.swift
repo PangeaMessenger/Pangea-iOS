@@ -37,10 +37,11 @@ struct MessageView: View {
                     
                     HStack {
                         ZStack {
-                            RoundedRectangle(cornerRadius: 10)
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color.black, lineWidth: 6)
                             TextEditor(text: $manager.text)
                         }
-                        .frame(height: 40)
+                        .frame(height: 45)
                         
                         Button {
                             if manager.text != "" {

@@ -19,7 +19,11 @@ struct ContentView: View {
         }
     }
     var body: some View {
-        WelcomeView(isShowing: $isLoggedIn)
+        if isLoggedIn == true {
+            MessageListView()
+        } else {
+            WelcomeView(isShowing: $isLoggedIn)
+        }
     }
 }
 

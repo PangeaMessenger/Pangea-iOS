@@ -7,13 +7,15 @@
 
 import SwiftUI
 import Firebase
+import SDWebImageSwiftUI
 
 struct SettingsView: View {
     @Binding var isShowing: Bool
-    @State var showingLoginView = false
     @State var isLoggedOut = false
+    @State var isShowingEditView: Bool = false
     
-    let userEmail: String = (Auth.auth().currentUser?.email)!
+    let userEmail: String = (Auth.auth().currentUser?.displayName)!
+    let profileImg: URL = (Auth.auth().currentUser?.photoURL) as! URL
     
     var body: some View {
         NavigationView {
@@ -30,7 +32,7 @@ struct SettingsView: View {
                             .font(.system(size: 30))
                             .bold()
                     } else {
-                        Image(uiImage: UIImage(named: "notlogged") ?? UIImage())
+                        WebImage(url: profileImg)
                             .resizable()
                             .clipShape(Circle())
                             .frame(width: 100, height: 100, alignment: .center)
@@ -46,7 +48,7 @@ struct SettingsView: View {
                     Spacer()
                     VStack(spacing: 2) {
                         Button {
-                            print("edit info")
+                            isShowingEditView.toggle()
                         } label: {
                             HStack {
                                 Image(systemName: "pencil")
@@ -58,10 +60,12 @@ struct SettingsView: View {
                             .font(.system(size: 18))
                             .padding()
                             .background(Color(.systemGray5))
+                        }.sheet(isPresented: $isShowingEditView) {
+                            EditUserInfo(isShowing: $isShowingEditView)
                         }
                         
                         Button {
-                            print("Logout")
+                            print("logout")
                             logOut()
                         } label: {
                             HStack {
@@ -72,6 +76,8 @@ struct SettingsView: View {
                             .font(.system(size: 18))
                             .padding()
                             .background(Color(.systemRed))
+                        }.fullScreenCover(isPresented: $isLoggedOut) {
+                            WelcomeView(isShowing: $isLoggedOut)
                         }
                     
                     Button {

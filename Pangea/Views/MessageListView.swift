@@ -80,7 +80,7 @@ struct MessageListView: View {
                         showingSettingsView.toggle()
                     } label: {
                         Image(systemName: "gearshape.fill")
-                    }.sheet(isPresented: $showingSettingsView) {
+                    }.fullScreenCover(isPresented: $showingSettingsView) {
                         SettingsView(isShowing: $showingSettingsView)
                     }
                 }
