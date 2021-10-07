@@ -53,6 +53,8 @@ struct AddContactView: View {
     }
     
     func findUser(id: String) {
-        
+        Database.database().reference().child("users").child(id).getData() { (error, snap) in
+            
+        }
     }
 }

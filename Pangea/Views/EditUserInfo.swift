@@ -35,15 +35,8 @@ struct EditUserInfo: View {
                     .autocapitalization(.none)
                 
                 Button {
-                    changeRequest?.displayName = username
-                    changeRequest?.photoURL = NSURL(string: photoURL) as URL?
-                    changeRequest?.commitChanges { error in
-                        if let error = error {
-                            print("an error happened: \(error)")
-                        } else {
-                            print("successfully changed user info")
-                            isShowing.toggle()
-                        }
+                    updateStuff {
+                        isShowing.toggle()
                     }
                 } label: {
                     ZStack {
@@ -57,6 +50,24 @@ struct EditUserInfo: View {
                     }.frame(height: 100)
                 }.fullScreenCover(isPresented: $isShowingHome) {
                     MessageListView()
+                }
+            }
+        }
+    }
+    
+    func updateStuff(completion: @escaping () -> Void) {
+        if let pangeaUser = Auth.auth().currentUser {
+            changeRequest?.displayName = username
+            changeRequest?.photoURL = URL(string: photoURL)
+            changeRequest?.commitChanges { error in
+                if let error = error {
+                    print("an error happened: \(error)")
+                    return completion()
+                } else {
+                    let userData = ["name" : self.username, "profileImg" : self.photoURL]
+                    Database.database().reference().child("users").child(pangeaUser.uid).updateChildValues(userData)
+                    print("successfully edited display name")
+                    return completion()
                 }
             }
         }
