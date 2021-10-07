@@ -1,2 +1,1 @@
-# PangeaClient
-# Pangea
+# Pangea iOS
