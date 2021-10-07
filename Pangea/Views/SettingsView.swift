@@ -16,7 +16,7 @@ struct SettingsView: View {
     
     let userEmail: String = (Auth.auth().currentUser?.displayName)!
     let profileImg: URL = (Auth.auth().currentUser?.photoURL) as! URL
-    
+    let userID: String = (Auth.auth().currentUser?.uid)!
     var body: some View {
         NavigationView {
             VStack {
@@ -37,10 +37,13 @@ struct SettingsView: View {
                             .clipShape(Circle())
                             .frame(width: 100, height: 100, alignment: .center)
                             .padding(8)
-            
+
                         Text(userEmail)
                             .font(.system(size: 30))
                             .bold()
+                        
+                        Text(userID)
+                            .font(.system(size: 15))
                     }
                 }
             

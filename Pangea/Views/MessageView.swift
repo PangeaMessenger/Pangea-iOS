@@ -5,8 +5,8 @@
 //  Created by Mattso on 12/07/2021.
 //
 
-import Foundation
 import SwiftUI
+import Firebase
 
 enum MessagePosition {
     case left
@@ -14,6 +14,8 @@ enum MessagePosition {
 }
 
 struct MessageView: View {
+    let db = Firestore.firestore()
+    
     @ObservedObject var manager = MessageManager()
     @Binding var isShowing: Bool
     

@@ -11,6 +11,7 @@ import FirebaseAuth
 
 struct EditUserInfo: View {
     @Binding var isShowing: Bool
+    @State var isShowingHome: Bool = false
     @State var userEmail: String = (Auth.auth().currentUser?.email)!
     @State var username: String = ""
     @State var photoURL: String = ""
@@ -53,7 +54,9 @@ struct EditUserInfo: View {
                             .bold()
                             .font(.system(size: 25))
                             .foregroundColor(.white)
-                    }
+                    }.frame(height: 100)
+                }.fullScreenCover(isPresented: $isShowingHome) {
+                    MessageListView()
                 }
             }
         }

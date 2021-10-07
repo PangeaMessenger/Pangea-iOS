@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ContactsView: View {
     @Binding var isShowing: Bool
-    @State var showingContactUserView = false
+    @State var showingContactUserView: Bool = false
+    @State var showingAddContactView: Bool = false
+    
+    let contactsMgr = ContactManager()
+    
     var body: some View {
         NavigationView {
             Form {
@@ -32,8 +36,11 @@ struct ContactsView: View {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button {
                         print("add")
+                        showingAddContactView.toggle()
                     } label: {
                         Image(systemName: "plus")
+                    }.sheet(isPresented: $showingAddContactView) {
+                        AddContactView()
                     }
                     
                     Spacer()
@@ -47,4 +54,13 @@ struct ContactsView: View {
             })
         }
     }
+    
+    func handleReload(_ contacts: [ContactInfo]) {
+        Contacts.list = contacts
+        Contacts.list.sort { (contact1, contact2) -> Bool  in
+            return contact1.name ?? "" < contact2.name ?? ""
+        }
+    }
+    
+    
 }

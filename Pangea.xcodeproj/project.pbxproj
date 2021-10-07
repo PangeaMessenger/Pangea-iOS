@@ -25,6 +25,18 @@
 		F41061792700C8CC0080696B /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41061782700C8CC0080696B /* ChatManager.swift */; };
 		F410617B270311BB0080696B /* EditUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410617A270311BB0080696B /* EditUserInfo.swift */; };
 		F410617E27031B5C0080696B /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F410617D27031B5C0080696B /* SDWebImageSwiftUI */; };
+		F4106180270344370080696B /* AddUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410617F270344370080696B /* AddUsernameView.swift */; };
+		F4106183270CF0320080696B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4106182270CF0320080696B /* UserModel.swift */; };
+		F4106185270CF11F0080696B /* TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4106184270CF11F0080696B /* TimeAgo.swift */; };
+		F4106187270CF1B80080696B /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4106186270CF1B80080696B /* AddContactView.swift */; };
+		F4106189270CF77B0080696B /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4106188270CF77B0080696B /* ContactManager.swift */; };
+		F410618B270CFBB80080696B /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410618A270CFBB80080696B /* MessageModel.swift */; };
+		F410618D270D92C80080696B /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410618C270D92C80080696B /* ContactModel.swift */; };
+		F410618F270D94040080696B /* ConversationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410618E270D94040080696B /* ConversationManager.swift */; };
+		F4106191270D962C0080696B /* MessageListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4106190270D962C0080696B /* MessageListManager.swift */; };
+		F4106193270D9A210080696B /* ChatKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4106192270D9A210080696B /* ChatKit.swift */; };
+		F4106195270E39970080696B /* ContactRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4106194270E39970080696B /* ContactRequestManager.swift */; };
+		F4106197270E418E0080696B /* AddContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4106196270E418E0080696B /* AddContactManager.swift */; };
 		F44A4C6E2690CBAE0004B6CC /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A4C6D2690CBAE0004B6CC /* MessageListView.swift */; };
 		F48D5DF526CEFA0B0073DC94 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48D5DF426CEFA0B0073DC94 /* LoginView.swift */; };
 		F48D5DF726CEFB3B0073DC94 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48D5DF626CEFB3B0073DC94 /* SignupView.swift */; };
@@ -63,6 +75,18 @@
 		F41061762700C8570080696B /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		F41061782700C8CC0080696B /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		F410617A270311BB0080696B /* EditUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserInfo.swift; sourceTree = "<group>"; };
+		F410617F270344370080696B /* AddUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUsernameView.swift; sourceTree = "<group>"; };
+		F4106182270CF0320080696B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		F4106184270CF11F0080696B /* TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAgo.swift; sourceTree = "<group>"; };
+		F4106186270CF1B80080696B /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
+		F4106188270CF77B0080696B /* ContactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactManager.swift; sourceTree = "<group>"; };
+		F410618A270CFBB80080696B /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		F410618C270D92C80080696B /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		F410618E270D94040080696B /* ConversationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationManager.swift; sourceTree = "<group>"; };
+		F4106190270D962C0080696B /* MessageListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListManager.swift; sourceTree = "<group>"; };
+		F4106192270D9A210080696B /* ChatKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatKit.swift; sourceTree = "<group>"; };
+		F4106194270E39970080696B /* ContactRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRequestManager.swift; sourceTree = "<group>"; };
+		F4106196270E418E0080696B /* AddContactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactManager.swift; sourceTree = "<group>"; };
 		F44A4C6D2690CBAE0004B6CC /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 		F48D5DF426CEFA0B0073DC94 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F48D5DF626CEFB3B0073DC94 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -120,6 +144,7 @@
 		23B8FA6C268F39EB00375FFD /* Pangea */ = {
 			isa = PBXGroup;
 			children = (
+				F4106181270CF0200080696B /* Models */,
 				F4B927DE269C22C100795824 /* Managers */,
 				F44A4C6A269090DA0004B6CC /* Views */,
 				23B8FA6D268F39EB00375FFD /* PangeaApp.swift */,
@@ -141,6 +166,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F4106181270CF0200080696B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4106182270CF0320080696B /* UserModel.swift */,
+				F410618A270CFBB80080696B /* MessageModel.swift */,
+				F410618C270D92C80080696B /* ContactModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F44A4C6A269090DA0004B6CC /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +190,8 @@
 				F48D5DF426CEFA0B0073DC94 /* LoginView.swift */,
 				F48D5DF626CEFB3B0073DC94 /* SignupView.swift */,
 				F410617A270311BB0080696B /* EditUserInfo.swift */,
+				F410617F270344370080696B /* AddUsernameView.swift */,
+				F4106186270CF1B80080696B /* AddContactView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +203,13 @@
 				F41061742700C6240080696B /* Message.swift */,
 				F41061762700C8570080696B /* UserManager.swift */,
 				F41061782700C8CC0080696B /* ChatManager.swift */,
+				F4106184270CF11F0080696B /* TimeAgo.swift */,
+				F4106188270CF77B0080696B /* ContactManager.swift */,
+				F410618E270D94040080696B /* ConversationManager.swift */,
+				F4106190270D962C0080696B /* MessageListManager.swift */,
+				F4106192270D9A210080696B /* ChatKit.swift */,
+				F4106194270E39970080696B /* ContactRequestManager.swift */,
+				F4106196270E418E0080696B /* AddContactManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -266,23 +310,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4106180270344370080696B /* AddUsernameView.swift in Sources */,
 				F41061792700C8CC0080696B /* ChatManager.swift in Sources */,
+				F4106185270CF11F0080696B /* TimeAgo.swift in Sources */,
+				F4106187270CF1B80080696B /* AddContactView.swift in Sources */,
 				F4B927DD269C21CB00795824 /* MessageView.swift in Sources */,
 				23B8FA77268F39EC00375FFD /* Persistence.swift in Sources */,
 				23B8FA70268F39EB00375FFD /* ContentView.swift in Sources */,
 				23D96BB6269CE64800C4AD3F /* ContactsView.swift in Sources */,
+				F4106193270D9A210080696B /* ChatKit.swift in Sources */,
 				23D96BB4269CE24A00C4AD3F /* SettingsView.swift in Sources */,
 				23B8FA6E268F39EB00375FFD /* PangeaApp.swift in Sources */,
 				F41061772700C8570080696B /* UserManager.swift in Sources */,
 				F40FC339269D6E8700F91D0E /* ContactUserView.swift in Sources */,
 				F48D5DF526CEFA0B0073DC94 /* LoginView.swift in Sources */,
+				F4106197270E418E0080696B /* AddContactManager.swift in Sources */,
 				F48D5DF726CEFB3B0073DC94 /* SignupView.swift in Sources */,
+				F4106191270D962C0080696B /* MessageListManager.swift in Sources */,
 				F4AD653F26CDC88C00CABBD5 /* WelcomeView.swift in Sources */,
+				F4106195270E39970080696B /* ContactRequestManager.swift in Sources */,
 				F4B927E0269C22CE00795824 /* MessageManager.swift in Sources */,
 				F4B927E2269C293500795824 /* ScrollView.swift in Sources */,
 				F410617B270311BB0080696B /* EditUserInfo.swift in Sources */,
+				F410618F270D94040080696B /* ConversationManager.swift in Sources */,
+				F410618D270D92C80080696B /* ContactModel.swift in Sources */,
 				F41061752700C6240080696B /* Message.swift in Sources */,
+				F410618B270CFBB80080696B /* MessageModel.swift in Sources */,
+				F4106189270CF77B0080696B /* ContactManager.swift in Sources */,
 				F44A4C6E2690CBAE0004B6CC /* MessageListView.swift in Sources */,
+				F4106183270CF0320080696B /* UserModel.swift in Sources */,
 				23B8FA7A268F39EC00375FFD /* Pangea.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

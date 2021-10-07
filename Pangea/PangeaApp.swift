@@ -16,6 +16,7 @@ struct PangeaApp: App {
     init() {
         FirebaseApp.configure()
         FirebaseConfiguration.shared.setLoggerLevel(.min)
+        let db = Firestore.firestore()
     }
     
     var body: some Scene {

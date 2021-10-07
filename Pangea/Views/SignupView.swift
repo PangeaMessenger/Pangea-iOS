@@ -29,7 +29,6 @@ struct SignupView: View {
                     .bold()
                     .font(.system(size: 60))
                     .padding(10)
-                
                 VStack(alignment: .center) {
                     TextField("Email", text: $email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -43,53 +42,37 @@ struct SignupView: View {
                     
                     if buttonPushed == true {
                         if authSuccess == false {
-                            Text("An error occured")
+                            Text("Uh oh! Something happened! Please check your password matches or try again!")
+                                .foregroundColor(.red)
                         } else {
-                            Text("Creating account...")
+                            Text("Signup success!")
+                                .foregroundColor(.green)
                         }
-                        
-                        if passwordsNoMatch == true {
-                            Text("Your passwords do not match. Please try again.")
-                        }
-                    } else {
-                        
                     }
                     
-                    Spacer()
-                    
-                        Button {
-                            if password == passwordConfirm {
-                                signUp()
-                                buttonPushed = true
-                                passwordsNoMatch = false
-                            } else {
-                                buttonPushed = true
-                                authSuccess = false
-                                passwordsNoMatch = true
-                            }
-                        } label: {
-                            ZStack {
-                                if(colorScheme == .dark) {
-                                    RoundedRectangle(cornerRadius: 25)
-                                        .foregroundColor(.white)
-                                
-                                    Text("Sign Up")
-                                        .foregroundColor(.black)
-                                        .font(.system(size: 25))
-                                } else {
-                                    RoundedRectangle(cornerRadius: 25)
-                                        .stroke(Color.black, lineWidth: 5)
-                                        .foregroundColor(.white)
-                                    
-                                    Text("Sign Up")
-                                        .foregroundColor(.black)
-                                        .font(.system(size: 25))
-                                }
-                            }.frame(width: 350, height: 100)
-                        }.fullScreenCover(isPresented: $authSuccess) {
-                            MessageListView()
-                        }
                 }
+                Spacer()
+                
+                    Button {
+                        print("button pushed")
+                        if (password == passwordConfirm) {
+                            buttonPushed = true
+                            signUp()
+                        } else {
+                            buttonPushed = false
+                        }
+                    } label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 25)
+                                .foregroundColor(.white)
+                            
+                            Text("Sign Up")
+                                .foregroundColor(.black)
+                                .font(.system(size: 25))
+                        }.frame(height: 100)
+                    }.fullScreenCover(isPresented: $authSuccess) {
+                        AddUsernameView()
+                    }
             }
             .navigationTitle("Sign Up")
             .navigationBarTitleDisplayMode(.inline)
@@ -112,7 +95,7 @@ struct SignupView: View {
                 print("Uh oh! \(error?.localizedDescription)")
             } else {
                 authSuccess = true
-                print("Sign up success!")
+                print("Created account successfully!")
             }
         }
     }
