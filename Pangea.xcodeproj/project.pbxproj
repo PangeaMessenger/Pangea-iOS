@@ -37,6 +37,8 @@
 		F4106193270D9A210080696B /* ChatKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4106192270D9A210080696B /* ChatKit.swift */; };
 		F4106195270E39970080696B /* ContactRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4106194270E39970080696B /* ContactRequestManager.swift */; };
 		F4106197270E418E0080696B /* AddContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4106196270E418E0080696B /* AddContactManager.swift */; };
+		F410619927133EF40080696B /* ContactRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410619827133EF40080696B /* ContactRequestView.swift */; };
+		F410619B271604DE0080696B /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410619A271604DE0080696B /* UserInfoView.swift */; };
 		F44A4C6E2690CBAE0004B6CC /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A4C6D2690CBAE0004B6CC /* MessageListView.swift */; };
 		F48D5DF526CEFA0B0073DC94 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48D5DF426CEFA0B0073DC94 /* LoginView.swift */; };
 		F48D5DF726CEFB3B0073DC94 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48D5DF626CEFB3B0073DC94 /* SignupView.swift */; };
@@ -87,6 +89,8 @@
 		F4106192270D9A210080696B /* ChatKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatKit.swift; sourceTree = "<group>"; };
 		F4106194270E39970080696B /* ContactRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRequestManager.swift; sourceTree = "<group>"; };
 		F4106196270E418E0080696B /* AddContactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactManager.swift; sourceTree = "<group>"; };
+		F410619827133EF40080696B /* ContactRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRequestView.swift; sourceTree = "<group>"; };
+		F410619A271604DE0080696B /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		F44A4C6D2690CBAE0004B6CC /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 		F48D5DF426CEFA0B0073DC94 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F48D5DF626CEFB3B0073DC94 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 				F410617A270311BB0080696B /* EditUserInfo.swift */,
 				F410617F270344370080696B /* AddUsernameView.swift */,
 				F4106186270CF1B80080696B /* AddContactView.swift */,
+				F410619827133EF40080696B /* ContactRequestView.swift */,
+				F410619A271604DE0080696B /* UserInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -329,7 +335,9 @@
 				F4106191270D962C0080696B /* MessageListManager.swift in Sources */,
 				F4AD653F26CDC88C00CABBD5 /* WelcomeView.swift in Sources */,
 				F4106195270E39970080696B /* ContactRequestManager.swift in Sources */,
+				F410619B271604DE0080696B /* UserInfoView.swift in Sources */,
 				F4B927E0269C22CE00795824 /* MessageManager.swift in Sources */,
+				F410619927133EF40080696B /* ContactRequestView.swift in Sources */,
 				F4B927E2269C293500795824 /* ScrollView.swift in Sources */,
 				F410617B270311BB0080696B /* EditUserInfo.swift in Sources */,
 				F410618F270D94040080696B /* ConversationManager.swift in Sources */,

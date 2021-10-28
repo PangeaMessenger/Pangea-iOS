@@ -28,11 +28,14 @@ struct EditUserInfo: View {
                 TextField("Username", text: $username)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 300)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
                 
                 TextField("Profile Image URL", text: $photoURL)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 300)
                     .autocapitalization(.none)
+                    .disableAutocorrection(true)
                 
                 Button {
                     updateStuff {

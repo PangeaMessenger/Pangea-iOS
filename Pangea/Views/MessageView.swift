@@ -14,9 +14,8 @@ enum MessagePosition {
 }
 
 struct MessageView: View {
-    let db = Firestore.firestore()
-    
     @ObservedObject var manager = MessageManager()
+    var otherMgr: AddContactManager
     @Binding var isShowing: Bool
     
     var body: some View {
@@ -39,9 +38,11 @@ struct MessageView: View {
                     
                     HStack {
                         ZStack {
-                            RoundedRectangle(cornerRadius: 15)
-                                .stroke(Color.black, lineWidth: 6)
                             TextEditor(text: $manager.text)
+                                .overlay (
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .stroke(Color.white, lineWidth: 6)
+                                )
                         }
                         .frame(height: 45)
                         
@@ -60,7 +61,7 @@ struct MessageView: View {
                 }
                 .padding()
             }
-            .navigationTitle("John Smith")
+            .navigationTitle("\(otherMgr.usrName ?? "An Error Occured")")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(content: {
                 Button {
@@ -71,6 +72,10 @@ struct MessageView: View {
             }
             )
         }
+    }
+    
+    func sendMessage(text: String, to: String, from: String) {
+        
     }
 }
 

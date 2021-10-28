@@ -1,16 +1,17 @@
 //
-//  ContactUserView.swift
+//  UserInfoView.swift
 //  Pangea
 //
-//  Created by Mattso on 13/07/2021.
+//  Created by Mattso on 12/10/2021.
 //
 
 import Foundation
 import SwiftUI
 import SDWebImageSwiftUI
 
-struct ContactUserView: View {
+struct UserInfoView: View {
     @Binding var isShowing: Bool
+    @State var isShowingMsgView: Bool = false
     
     let addContactView = AddContactView()
     @ObservedObject var mgr: AddContactManager
@@ -26,6 +27,7 @@ struct ContactUserView: View {
                 Text("\(mgr.usrName ?? "")")
                     .bold()
                     .font(.system(size: 30))
+                Text(mgr.usrId)
                 
                 ZStack {
                     
@@ -35,11 +37,15 @@ struct ContactUserView: View {
                     
                     HStack {
                         Button {
-                            print("message")
+                            mgr.findUser(id: mgr.usrId) {
+                                isShowingMsgView.toggle()
+                            }
                         } label: {
                             Image(systemName: "message.fill")
                                 .resizable()
                                 .frame(width: 20, height: 20)
+                        }.sheet(isPresented: $isShowingMsgView) {
+                            MessageView(otherMgr: mgr, isShowing: $isShowingMsgView)
                         }
                         
                     
@@ -51,27 +57,6 @@ struct ContactUserView: View {
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(.red)
                         }
-                    
-                    }
-                    
-                }
-                
-                Spacer()
-                
-                HStack {
-                    Button {
-                        mgr.addAsContact()
-                    } label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 25)
-                                .foregroundColor(.blue)
-                                .frame(height: 100)
-                        
-                            Text("Add Contact")
-                                .bold()
-                                .font(.system(size: 20))
-                                .foregroundColor(.white)
-                        }
                     }
                 }
             }
@@ -79,3 +64,4 @@ struct ContactUserView: View {
         }
     }
 }
+

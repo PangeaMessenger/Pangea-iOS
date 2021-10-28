@@ -12,6 +12,10 @@ struct MessageListView: View {
     @State private var showingMessageView = false
     @State private var showingSettingsView = false
     @State private var showingContactsView = false
+    
+    var reqMgr = ContactRequestManager()
+    var contactMgr = ContactManager()
+    var addMgr = AddContactManager()
 
     var body: some View {
         NavigationView {
@@ -48,7 +52,7 @@ struct MessageListView: View {
                 .onTapGesture {
                     showingMessageView.toggle()
                 }.sheet(isPresented: $showingMessageView) {
-                    MessageView(isShowing: $showingMessageView)
+                    MessageView(otherMgr: addMgr, isShowing: $showingMessageView)
                 }
                 
                 Spacer()
@@ -71,7 +75,7 @@ struct MessageListView: View {
                     } label: {
                         Image(systemName: "rectangle.stack.person.crop.fill")
                     }.sheet(isPresented: $showingContactsView) {
-                        ContactsView(isShowing: $showingContactsView)
+                        ContactsView(isShowing: $showingContactsView, contactsMgr: contactMgr, reqMgr: reqMgr)
                     }
                     
                     Spacer()

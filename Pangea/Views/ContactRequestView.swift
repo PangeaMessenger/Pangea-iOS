@@ -1,19 +1,20 @@
 //
-//  ContactUserView.swift
+//  ContactRequestView.swift
 //  Pangea
 //
-//  Created by Mattso on 13/07/2021.
+//  Created by Mattso on 10/10/2021.
 //
 
-import Foundation
 import SwiftUI
+import Firebase
 import SDWebImageSwiftUI
 
-struct ContactUserView: View {
+struct ContactRequestView: View {
     @Binding var isShowing: Bool
     
     let addContactView = AddContactView()
     @ObservedObject var mgr: AddContactManager
+    let reqMgr = ContactRequestManager()
     
     var body: some View {
         NavigationView {
@@ -58,16 +59,33 @@ struct ContactUserView: View {
                 
                 Spacer()
                 
-                HStack {
+                VStack {
                     Button {
-                        mgr.addAsContact()
+                        reqMgr.acceptRequest(id: mgr.usrId ?? "") {
+                            print("Accepted Request")
+                        }
                     } label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 25)
                                 .foregroundColor(.blue)
                                 .frame(height: 100)
                         
-                            Text("Add Contact")
+                            Text("Accept Request")
+                                .bold()
+                                .font(.system(size: 20))
+                                .foregroundColor(.white)
+                        }
+                    }
+                    
+                    Button {
+                        print("lmao")
+                    } label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 25)
+                                .foregroundColor(.red)
+                                .frame(height: 100)
+                        
+                            Text("Decline Request")
                                 .bold()
                                 .font(.system(size: 20))
                                 .foregroundColor(.white)

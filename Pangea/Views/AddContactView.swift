@@ -11,6 +11,7 @@ import Firebase
 struct AddContactView: View {
     
     @State var userID: String = ""
+    @State var isShowingContactUserView: Bool = false
     
     var contactRequests = [ContactInfo]()
     var mgr = AddContactManager()
@@ -27,7 +28,9 @@ struct AddContactView: View {
                     .frame(width: 300)
                 
                 Button {
-                    
+                    mgr.findUser(id: userID) {
+                        isShowingContactUserView.toggle()
+                    }
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 25)
@@ -39,22 +42,11 @@ struct AddContactView: View {
                             .font(.system(size: 25))
                             .foregroundColor(.white)
                     }
+                }.sheet(isPresented: $isShowingContactUserView) {
+                    ContactUserView(isShowing: $isShowingContactUserView, mgr: mgr)
                 }
                 
-                Spacer()
-                
-                Text("Pending Requests")
-                    .bold()
-                    .font(.system(size: 30))
-                Divider()
-                Text("No Pending Requests")
             }
-        }
-    }
-    
-    func findUser(id: String) {
-        Database.database().reference().child("users").child(id).getData() { (error, snap) in
-            
         }
     }
 }

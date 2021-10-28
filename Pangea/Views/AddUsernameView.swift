@@ -26,11 +26,13 @@ struct AddUsernameView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 300)
                     .autocapitalization(.none)
+                    .disableAutocorrection(true)
                 
                 TextField("Photo URL", text: $photoUrl)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 300)
                     .autocapitalization(.none)
+                    .disableAutocorrection(true)
                 
                 
                 Button {
