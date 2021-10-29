@@ -9,6 +9,7 @@ import Firebase
 
 class MessageManager: ObservableObject {
     @Published var messageArray: [String] = []
+    @Published var timeStampArray: [String] = []
     @Published var positionArray: [MessagePosition] = []
     @Published var position = MessagePosition.right
 }

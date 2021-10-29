@@ -30,7 +30,7 @@ struct MessageView: View {
                                 MessageBubble(position: manager.positionArray[index], color: manager.positionArray[index] == MessagePosition.right ?.black : .white, fColor: manager.positionArray[index] == MessagePosition.right ?.white : .black) {
                                     VStack(alignment: manager.positionArray[index] == MessagePosition.right ?.trailing : .leading) {
                                         Text(manager.messageArray[index])
-                                        Time()
+                                        Text(manager.timeStampArray[index])
                                     }
                                 }
                             }
@@ -52,11 +52,11 @@ struct MessageView: View {
                         
                         Button {
                             if msgText != "" {
-                                manager.position = manager.position == MessagePosition.right ? MessagePosition.left : MessagePosition.right
+                                manager.position = MessagePosition.right
                                 manager.positionArray.append(manager.position)
                                 manager.messageArray.append(msgText)
-                                sendMessage(text: msgText) {
-                                    msgText = ""
+                                sendMessage(id: msgIDGen(length: 12), text: msgText, timeSent: Time().timeValue) {
+                                    print("sent message")
                                 }
                             }
                         } label: {
@@ -75,14 +75,57 @@ struct MessageView: View {
                 } label: {
                     Text("Done")
                 }
+            })
+        }.onAppear(perform: getMessages)
+    }
+    
+    func getMessages() {
+        let msgReciever = Auth.auth().currentUser
+        
+        Database.database().reference().child("messages").child(msgReciever?.uid ?? "").child(otherMgr.usrId).observeSingleEvent(of: .value) { (snap) in
+            
+            if (snap.value is NSNull) {
+                print("No messages found")
+            } else {
+                for messages in (snap.children) {
+                    let rMsg = messages as! DataSnapshot
+                    let dict = rMsg.value as! [String:String?]
+                    
+                    let msgText = dict["text"] as? String
+                    let timeSent = dict["timeSent"] as? String
+                    
+                    print("\(msgText)")
+                    
+                    manager.messageArray.append(msgText ?? "")
+                    manager.timeStampArray.append(timeSent ?? "")
+                    manager.position = MessagePosition.left
+                }
             }
-            )
         }
     }
     
-    func sendMessage(text: String, completion: @escaping () -> Void) {
+    func msgIDGen(length: Int) -> String {
+        let letters: NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        
+        return randomString
+    }
+    
+    func sendMessage(id: String, text: String, timeSent: String, completion: @escaping () -> Void) {
         let msgSender = Auth.auth().currentUser
-        Database.database().reference().child("messages").child(otherMgr.usrId).child(msgSender?.uid ?? "").setValue(["messageContents" : msgText])
+        Database.database().reference().child("messages").child(otherMgr.usrId).child(msgSender?.uid ?? "").child(id).setValue(["text" : text, "timeSent" : timeSent])
+        
+        Database.database().reference().child("messages").child(msgSender?.uid ?? "").child(otherMgr.usrId).child(id).setValue(["text" : text, "timeSent" : timeSent])
+        
+        self.msgText = ""
     }
 }
 
