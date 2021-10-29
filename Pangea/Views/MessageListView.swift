@@ -16,6 +16,7 @@ struct MessageListView: View {
     var reqMgr = ContactRequestManager()
     var contactMgr = ContactManager()
     var addMgr = AddContactManager()
+    var msgMgr = MessageManager()
 
     var body: some View {
         NavigationView {
@@ -52,7 +53,7 @@ struct MessageListView: View {
                 .onTapGesture {
                     showingMessageView.toggle()
                 }.sheet(isPresented: $showingMessageView) {
-                    MessageView(otherMgr: addMgr, isShowing: $showingMessageView)
+                    MessageView(manager: msgMgr, otherMgr: addMgr, isShowing: $showingMessageView)
                 }
                 
                 Spacer()

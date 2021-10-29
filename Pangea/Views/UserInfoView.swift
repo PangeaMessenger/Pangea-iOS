@@ -14,6 +14,7 @@ struct UserInfoView: View {
     @State var isShowingMsgView: Bool = false
     
     let addContactView = AddContactView()
+    let msgMgr = MessageManager()
     @ObservedObject var mgr: AddContactManager
     
     var body: some View {
@@ -45,7 +46,7 @@ struct UserInfoView: View {
                                 .resizable()
                                 .frame(width: 20, height: 20)
                         }.sheet(isPresented: $isShowingMsgView) {
-                            MessageView(otherMgr: mgr, isShowing: $isShowingMsgView)
+                            MessageView(manager: msgMgr, otherMgr: mgr, isShowing: $isShowingMsgView)
                         }
                         
                     

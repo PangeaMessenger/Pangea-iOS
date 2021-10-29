@@ -7,7 +7,6 @@
 
 import SwiftUI
 import Firebase
-import StreamChat
 
 @main
 struct PangeaApp: App {
@@ -16,7 +15,6 @@ struct PangeaApp: App {
     init() {
         FirebaseApp.configure()
         FirebaseConfiguration.shared.setLoggerLevel(.min)
-        let db = Firestore.firestore()
     }
     
     var body: some Scene {
@@ -25,8 +23,4 @@ struct PangeaApp: App {
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
-}
-
-extension ChatClient {
-    static var shared: ChatClient!
 }

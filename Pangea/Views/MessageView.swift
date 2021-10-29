@@ -14,9 +14,11 @@ enum MessagePosition {
 }
 
 struct MessageView: View {
-    @ObservedObject var manager = MessageManager()
+    @ObservedObject var manager: MessageManager
     var otherMgr: AddContactManager
     @Binding var isShowing: Bool
+    
+    @State var msgText = ""
     
     var body: some View {
         NavigationView {
@@ -38,7 +40,9 @@ struct MessageView: View {
                     
                     HStack {
                         ZStack {
-                            TextEditor(text: $manager.text)
+                            TextField("Message \(otherMgr.usrName ?? "")...", text: $msgText)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .frame(width: 300, height: 50)
                                 .overlay (
                                     RoundedRectangle(cornerRadius: 15)
                                         .stroke(Color.white, lineWidth: 6)
@@ -47,11 +51,13 @@ struct MessageView: View {
                         .frame(height: 45)
                         
                         Button {
-                            if manager.text != "" {
+                            if msgText != "" {
                                 manager.position = manager.position == MessagePosition.right ? MessagePosition.left : MessagePosition.right
                                 manager.positionArray.append(manager.position)
-                                manager.messageArray.append(manager.text)
-                                manager.text = ""
+                                manager.messageArray.append(msgText)
+                                sendMessage(text: msgText) {
+                                    msgText = ""
+                                }
                             }
                         } label: {
                             Image(systemName: "paperplane.fill")
@@ -74,8 +80,9 @@ struct MessageView: View {
         }
     }
     
-    func sendMessage(text: String, to: String, from: String) {
-        
+    func sendMessage(text: String, completion: @escaping () -> Void) {
+        let msgSender = Auth.auth().currentUser
+        Database.database().reference().child("messages").child(otherMgr.usrId).child(msgSender?.uid ?? "").setValue(["messageContents" : msgText])
     }
 }
 
